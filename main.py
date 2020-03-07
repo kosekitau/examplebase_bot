@@ -25,5 +25,5 @@ while True:
   text = input(">>>")
   if text == "quit":
     break
-  r = item.ans(text, df)
+  r = ans(text, df)
   print(r)

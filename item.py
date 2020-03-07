@@ -22,13 +22,6 @@ def morpheme_list(text):
 
   return i
 
-#応答文の出力
-def ans(text, df):
-  text_wakati = morpheme_list(text)#入力文の形態素解析
-  wmd = lambda x: model.wv.wmdistance(text_wakati, x)
-  result = df['input_wakati'].map(wmd).idxmin()
-  return df['output'].iloc[result]
-
 mecab = MeCab.Tagger('-d /usr/local/lib/mecab/dic/mecab-ipadic-neologd')
 model_path = 'model/word2vec.gensim.model'
 model = Word2Vec.load(model_path)
