@@ -3,7 +3,7 @@ import pandas as pd
 import MeCab
 from gensim.models.word2vec import Word2Vec
 from gensim.models.keyedvectors import KeyedVectors
-import item
+import item #自作モジュール
 
 mecab = MeCab.Tagger('-d /usr/local/lib/mecab/dic/mecab-ipadic-neologd')
 print("学習済みモデル読み込み")
